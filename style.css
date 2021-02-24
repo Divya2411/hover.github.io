@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+ margin-top: 40px;
+}
+
+.type{
+    font-size: 40px;
+    font-weight: 400;
+    white-space: nowrap;
+    animation: types 3s steps(17);
+    overflow: hidden;
+    width: 17ch;
+    -webkit-animation: types 3s steps(17);
+}
+
+@keyframes types{
+    0%{
+        width: 0ch;
+    }
+    100% {
+        width: 16ch;
+    }
+}
+.text-muted{
+    font-size: 30px
+}
+ .bold{
+     font-weight: bold;
+ }
+ .center{
+     position: relative;
+     
+ }
+
+ .img-fluid{
+     opacity: 1;
+     display: block;
+     transition: 0.5s ease;
+     margin-bottom: 20px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+     -webkit-transition: 0.5s ease;
+     -moz-transition: 0.5s ease;
+     -ms-transition: 0.5s ease;
+     -o-transition: 0.5s ease;
+     overflow: hidden;
+}
+
+ .middle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5 ease;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-transition: 0.5 ease;
+    -moz-transition: 0.5 ease;
+    -ms-transition: 0.5 ease;
+    -o-transition: 0.5 ease;
+    overflow: hidden;
+ }
+ 
+.content {
+    position: absolute;
+    color:black;
+    font-size: 22px;
+    margin: 0 10px;
+    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+    transition: .2s;
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+.content p{
+    margin: 10px 0 0 0;
+    font-size: 18px;
+}
+
+
+
+.middle:hover .content{
+    visibility: visible;
+    
+}
+
+.middle::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.7);
+    width: 0;
+    height: 100%;
+    clip-path: polygon(0 100%,100% 0,0% 0%);
+    transition: 0.5s;
+}
+.middle:hover::before{
+    width: 100%;
+}
+
+.fa{
+    padding: 10px;
+    color: black;
+    margin:20px 10px 50px 0 ;
+
+}
+.fa:hover{
+    background-color: black;
+    color: #ffffff;
+}
